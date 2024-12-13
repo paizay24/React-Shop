@@ -6,7 +6,7 @@ const ProductCategorySection = () => {
   return (
     <div className=''>
       <p className=' text-gray-500'>Product Categories</p>
-     <div className=' flex gap-2 mt-2'>
+     <div className=' flex gap-2 mt-2 '>
      {Categories.map((category) => (
           <CategoryBtn key={category} title={category} current={true}></CategoryBtn>
       ))}

@@ -1,19 +1,9 @@
-import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import ProductCategorySection from "./Components/ProductCategorySection";
-import ProductSection from "./Components/ProductSection";
-import Container from "./Components/Container";
+import { RouterProvider } from "react-router";
+import router from "./routes/router";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Container>
-      <Header></Header>
-      <ProductCategorySection></ProductCategorySection>
-      <ProductSection></ProductSection>
-      <Footer></Footer>
-    </Container>
-  </StrictMode>
-);
+
+const root = document.querySelector("#root");
+createRoot(root).render(<RouterProvider router={router} />);

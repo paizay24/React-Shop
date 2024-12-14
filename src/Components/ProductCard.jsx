@@ -1,5 +1,6 @@
 import React from "react";
 import Rating from "./Rating";
+import { Link } from "react-router";
 
 const ProductCard = ({
   product: {
@@ -11,7 +12,7 @@ const ProductCard = ({
   },
 }) => {
   return (
-    <div className=" border border-black p-2 my-2 space-y-2">
+    <Link to={`/productDetail/${id}`} className=" border border-black p-2 my-2 space-y-2">
       <img src={image} className=" h-40" alt="" />
       <Rating rate={rate} />
       <h1 className=" font-bold line-clamp-1">{title}</h1>
@@ -19,7 +20,7 @@ const ProductCard = ({
         <p>{price}</p>
         <button className="  border border-black p-1 text-sm ">Add Cart</button>
       </div>
-    </div>
+    </Link>
   );
 };
 

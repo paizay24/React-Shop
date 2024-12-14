@@ -1,13 +1,17 @@
 import React from "react";
+import Container from "./Container";
 
 const Footer = () => {
   const date = new Date().getFullYear();
-  console.log(date);
 
   return (
-    <div className=" mt-auto">
-      <p className=" bg-black text-white text-center p-3 ">{date} MMS IT.All rights reserved.</p>
-    </div>
+    <Container>
+      <div className=" mt-auto">
+        <p className=" bg-black text-white text-center p-3 ">
+          {date} MMS IT.All rights reserved.
+        </p>
+      </div>
+    </Container>
   );
 };
 

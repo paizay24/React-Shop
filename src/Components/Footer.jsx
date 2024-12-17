@@ -1,17 +1,15 @@
 import React from "react";
-import Container from "./Container";
 
 const Footer = () => {
-  const date = new Date().getFullYear();
-
+  const date = new Date();
   return (
-    <Container>
-      <div className=" mt-auto">
-        <p className=" bg-black text-white text-center p-3 ">
-          {date} MMS IT.All rights reserved.
-        </p>
-      </div>
-    </Container>
+    <footer className=" mx-5 mt-auto bg-black text-white text-center py-2">
+      © {date.getFullYear()}{" "}
+      <a href="https://mms-it.com" className=" underline text-gray-300">
+        MMS IT
+      </a>
+      . All rights reserved.
+    </footer>
   );
 };
 

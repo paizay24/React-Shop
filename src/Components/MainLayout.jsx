@@ -6,9 +6,11 @@ import Header from "./Header";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className=" flex flex-col min-h-screen">
       <Header />
+     
       <Outlet />
+      
       <Footer />
     </div>
   );

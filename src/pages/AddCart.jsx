@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import CartSection from '../Components/CartSection'
 
 const AddCart = () => {
   return (
-    <Link>
-      This is add cart
-    </Link>
+   <div>
+    <CartSection></CartSection>
+   </div>
   )
 }
 

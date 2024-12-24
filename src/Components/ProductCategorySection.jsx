@@ -1,25 +1,19 @@
 import React from "react";
 import CategoryBtn from "./CategoryBtn";
 import Container from "./Container";
+import useStoreCategory from "../store/useStoreCategory";
 
 const ProductCategorySection = () => {
-  const Categories = [
-    "All",
-    "Electronics",
-    "Jewllery",
-    "Men's Clothing",
-    "Women's Clothing",
-  ];
+ const {categories} = useStoreCategory();
   return (
     <Container>
       <div className="">
         <p className=" text-gray-500">Product Categories</p>
         <div className=" flex gap-2 mt-2 ">
-          {Categories.map((category) => (
+          {categories.map((category) => (
             <CategoryBtn
-              key={category}
-              title={category}
-              current={true}
+              key={category.id}
+              category={category}
             ></CategoryBtn>
           ))}
         </div>

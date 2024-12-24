@@ -1,11 +1,17 @@
 import React from "react";
+import useStoreCategory from "../store/useStoreCategory";
 
-const CategoryBtn = ({ title, current }) => {
+const CategoryBtn = ({ category:{id,title,isActive} }) => {
+  const {isActiveFn} = useStoreCategory();
+  const isActiveHandler = () => {
+    isActiveFn(id);
+  };
   return (
     <div className=" mt-3">
       <button
+      onClick={isActiveHandler}
         className={` ${
-          current && "bg-black text-white"
+          isActive && "bg-black text-white"
         } border border-black p-3 text-nowrap`}
       >
         {title}

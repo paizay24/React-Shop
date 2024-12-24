@@ -13,19 +13,25 @@ const ProductCard = ({
   },
 }) => {
   return (
-    <Link to={`/productDetail/${id}`} className=" border border-black p-2 my-2 space-y-2">
-      <img src={image} className=" h-40" alt="" />
+    <Link
+      to={`/productDetail/${id}`}
+      className=" border border-black p-2 my-2 space-y-2"
+    >
+      <div className="flex justify-center items-center ">
+        <img src={image} className="h-40" alt="" />
+      </div>
+
       <Rating rate={rate} />
       <h1 className=" font-bold line-clamp-1">{title}</h1>
       <div className=" flex justify-between items-end w-full">
         <p>{price}</p>
-        {
-          cartProducts.find((product) => product.id == id) ? (
-            <button className=" border border-black bg-black text-white p-2">Added</button>
-          ) : (
-            <button className=" border border-black p-2">Add Cart</button>
-          )
-        }
+        {cartProducts.find((product) => product.id == id) ? (
+          <button className=" border border-black bg-black text-white p-2">
+            Added
+          </button>
+        ) : (
+          <button className=" border border-black p-2">Add Cart</button>
+        )}
       </div>
     </Link>
   );
